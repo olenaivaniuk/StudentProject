@@ -5,14 +5,12 @@ import edu.javacourse.studentorder.domain.AnswerStudent;
 import edu.javacourse.studentorder.domain.Person;
 import edu.javacourse.studentorder.domain.StudentOrder;
 
+import java.time.LocalDate;
+
 public class SaveStudentOrder {
     public static void main (String[] args) {
-        buildStudentOrder();
-
-        //StudentOrder so = new StudentOrder();
-        //long ans = saveStudentOrder(so);
-        //System.out.println(ans);
-    }
+        buildStudentOrder(10);
+        }
 
     static long saveStudentOrder(StudentOrder studentOrder) {
         long answer = 199;
@@ -20,19 +18,19 @@ public class SaveStudentOrder {
         return answer;
     }
 
-    public static StudentOrder buildStudentOrder() {
+    public static StudentOrder buildStudentOrder(long id) {
         StudentOrder so = new StudentOrder();
-        Adult hauband = new Adult();
-                
-        /*husband.setGivenName("Jack");
-        husband.setSurName("Wimmer");
-        husband.setPassportNumber("5255222");
-        so.setHusband(husband);
+        so.setStudentOrderId(id);
+        StudentOrder so1 = so;
+        printStudentOrder(so1);
 
-        String ans = husband.getPersonString();
-        System.out.println(ans); */
         return so;
+    }
 
+    static public void printStudentOrder(StudentOrder stud) {
+        System.out.println(stud.getStudentOrderId());
 
     }
 }
+
+//garbage collector

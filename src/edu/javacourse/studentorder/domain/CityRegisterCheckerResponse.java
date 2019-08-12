@@ -3,6 +3,9 @@ package edu.javacourse.studentorder.domain;
 public class CityRegisterCheckerResponse {
     private boolean existing;
     private Boolean temporal;         //классы обертки false, true, null
+    //Integer i;
+    //Long l;
+    //Character c;
 
     public boolean isExisting() {
         return existing;

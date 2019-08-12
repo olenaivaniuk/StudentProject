@@ -5,7 +5,7 @@ import edu.javacourse.studentorder.mail.MailSender;
 import edu.javacourse.studentorder.validator.ChildrenValidator;
 import edu.javacourse.studentorder.validator.CityRegisterValidator;
 import edu.javacourse.studentorder.validator.StudentValidator;
-import edu.javacourse.studentorder.validator.WeddingValidator;
+import edu.javacourse.studentorder.validator.WeddingValidator;   //ctrl + alt + B
 
 public class StudentOrderValidator {
     private CityRegisterValidator cityRegisterVal;

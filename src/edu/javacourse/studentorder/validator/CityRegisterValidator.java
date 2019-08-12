@@ -7,9 +7,18 @@ public class CityRegisterValidator {
     public String hostName;
     public String login;
     int port;
+    private CityRegisterChecker personChecker;
+
+    public CityRegisterValidator() {
+        personChecker = new FakeCityRegisterChecker();
+    }
 
     public AnswerCityRegister checkCityRegister(StudentOrder so) {
-        System.out.println("cityRegister is running " + hostName + "," + login );
+
+        personChecker.checkPerson(so.getHusband());
+        personChecker.checkPerson(so.getWife());
+        personChecker.checkPerson(so.getChild());
+
         AnswerCityRegister ans = new AnswerCityRegister();
         ans.success = false;
         return ans;

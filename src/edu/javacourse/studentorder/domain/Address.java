@@ -4,8 +4,19 @@ public class Address {
     private String postCode;
     private String street;
     private String building;
-    private String extention;
+    private String extension;
     private String apartment;
+
+    public Address() {
+    }
+
+    public Address(String postCode, String street, String building, String extension, String apartment) {
+        this.postCode = postCode;
+        this.street = street;
+        this.building = building;
+        this.extension = extension;
+        this.apartment = apartment;
+    }
 
     public String getPostCode() {
         return postCode;
@@ -32,11 +43,11 @@ public class Address {
     }
 
     public String getExtention() {
-        return extention;
+        return extension;
     }
 
     public void setExtention(String extention) {
-        this.extention = extention;
+        this.extension = extention;
     }
 
     public String getApartment() {

@@ -6,6 +6,10 @@ import edu.javacourse.studentorder.validator.ChildrenValidator;
 import edu.javacourse.studentorder.validator.CityRegisterValidator;
 import edu.javacourse.studentorder.validator.StudentValidator;
 import edu.javacourse.studentorder.validator.WeddingValidator;   //ctrl + alt + B
+//import edu.javacourse.studentorder.domain.children.AnswerChildren;
+//import edu.javacourse.studentorder.domain.register.AnswerCityRegister;
+//import edu.javacourse.studentorder.domain.student.AnswerStudent;
+//import edu.javacourse.studentorder.domain.wedding.AnswerWedding;
 
 public class StudentOrderValidator {
     private CityRegisterValidator cityRegisterVal;
@@ -30,10 +34,6 @@ public class StudentOrderValidator {
 
     public void checkAll() {
         StudentOrder[] soArray = readStudentOrders();
-        /*for (int i = 0; i < soArray.length; i++) {
-            System.out.println();
-            checkOneOrder(soArray[i]); }*/
-
         for(StudentOrder so: soArray) {
             System.out.println();
             checkOneOrder(so);
@@ -49,10 +49,7 @@ public class StudentOrderValidator {
         }
 public void checkOneOrder(StudentOrder so) {
     AnswerCityRegister cityAnswer = checkCityRegister(so);
-    AnswerWedding wedAnswer = checkWedding(so);
-    AnswerChildren childAnswer = checkChildren(so);
-    AnswerStudent studentAnswer = checkStudent(so);
-    sentMail(so);
+    //sentMail(so);
 }
 
 

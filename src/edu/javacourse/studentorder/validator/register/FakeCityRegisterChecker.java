@@ -1,12 +1,13 @@
-package edu.javacourse.studentorder.validator;
+package edu.javacourse.studentorder.validator.register;
 
 import edu.javacourse.studentorder.domain.Adult;
 import edu.javacourse.studentorder.domain.Child;
-import edu.javacourse.studentorder.domain.CityRegisterCheckerResponse;
+import edu.javacourse.studentorder.domain.register.CityRegisterResponse;
 import edu.javacourse.studentorder.domain.Person;
 import edu.javacourse.studentorder.exception.CityRegisterException;
+import edu.javacourse.studentorder.validator.register.CityRegisterChecker;
 
-public class FakeCityRegisterChecker implements CityRegisterChecker{
+public class FakeCityRegisterChecker implements CityRegisterChecker {
 
     private static final String GOOD_1 = "1000";
     private static final String GOOD_2 = "2000";
@@ -15,9 +16,9 @@ public class FakeCityRegisterChecker implements CityRegisterChecker{
     private static final String ERROR_1 = "1002";
     private static final String ERROR_2 = "2002";
 
-    public CityRegisterCheckerResponse checkPerson (Person person)  throws CityRegisterException {
+    public CityRegisterResponse checkPerson (Person person)  throws CityRegisterException {
 
-        CityRegisterCheckerResponse res = new CityRegisterCheckerResponse();
+        CityRegisterResponse res = new CityRegisterResponse();
 
         if (person instanceof Adult) {
             Adult t = (Adult) person;  // приведение
